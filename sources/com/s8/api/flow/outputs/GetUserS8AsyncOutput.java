@@ -8,8 +8,6 @@ import com.s8.api.flow.S8User;
  *
  */
 public class GetUserS8AsyncOutput extends S8AsyncOutput {
-
-	
 	
 	public boolean isUserDefined = false;
 	

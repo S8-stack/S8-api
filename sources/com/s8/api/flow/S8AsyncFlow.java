@@ -41,7 +41,13 @@ public interface S8AsyncFlow {
 	 * @return
 	 */
 	public default String getMySpaceId() {
-		return getMe().getPersonalSpaceId();
+		S8User me = getMe();
+		if(me != null) {
+			return me.getPersonalSpaceId();	
+		}
+		else {
+			return null;
+		}
 	}
 
 
