@@ -8,9 +8,6 @@
 module com.s8.api {
 	
 	
-	exports com.s8.api.bohr;
-	
-	
 	exports com.s8.api.bytes;
 	
 	exports com.s8.api.exceptions;
