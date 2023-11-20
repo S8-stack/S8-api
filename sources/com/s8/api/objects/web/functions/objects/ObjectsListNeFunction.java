@@ -4,12 +4,12 @@ import java.util.List;
 
 import com.s8.api.bohr.BOHR_Types;
 import com.s8.api.flow.S8AsyncFlow;
-import com.s8.api.objects.web.WebS8Object;
+import com.s8.api.objects.web.S8WebFrontObject;
 import com.s8.api.objects.web.functions.NeFunction;
 
 
 @FunctionalInterface
-public interface ObjectsListNeFunction<T extends WebS8Object> extends NeFunction {
+public interface ObjectsListNeFunction<T extends S8WebFrontObject> extends NeFunction {
 	
 	
 	public final static long SIGNATURE = (BOHR_Types.ARRAY << 8) & BOHR_Types.S8OBJECT;

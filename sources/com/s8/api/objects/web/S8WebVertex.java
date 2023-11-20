@@ -12,7 +12,7 @@ import com.s8.api.bytes.ByteOutflow;
  * Copyright (C) 2022, Pierre Convert. All rights reserved.
  *
  */
-public interface WebS8Vertex {
+public interface S8WebVertex {
 
 	
 	/**
@@ -23,14 +23,14 @@ public interface WebS8Vertex {
 	
 	
 	
-	public WebS8Session getSession();
+	public S8WebFront getSession();
 	
 	
 	/**
 	 * Object attached to this vertex
 	 * @return
 	 */
-	public WebS8Object getAttachedObject();
+	public S8WebFrontObject getAttachedObject();
 
 
 

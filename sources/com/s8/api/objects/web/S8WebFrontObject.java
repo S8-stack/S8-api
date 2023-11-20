@@ -6,25 +6,25 @@ package com.s8.api.objects.web;
  * @author pierreconvert
  *
  */
-public class WebS8Object {
+public class S8WebFrontObject {
 
 
 	/**
 	 * 
 	 */
-	public final WebS8Vertex vertex;
+	public final S8WebVertex vertex;
 	
 	
 	/**
 	 * 
-	 * @param session
+	 * @param front
 	 * @param typeName
 	 */
-	public WebS8Object(WebS8Session session, String typeName) {
+	public S8WebFrontObject(S8WebFront front, String typeName) {
 		super();
 		
 		/* create vertex and assign object to it */
-		vertex = session.createVertex(typeName, this);
+		vertex = front.createVertex(typeName, this);
 	}
 
 

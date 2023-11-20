@@ -6,7 +6,7 @@ package com.s8.api.objects.web;
  * @author pierreconvert
  *
  */
-public interface WebS8Session {
+public interface S8WebFront {
 
 	
 	/**
@@ -15,6 +15,6 @@ public interface WebS8Session {
 	 * @param object
 	 * @return
 	 */
-	public WebS8Vertex createVertex(String typeName, WebS8Object object);
+	public S8WebVertex createVertex(String typeName, S8WebFrontObject object);
 
 }

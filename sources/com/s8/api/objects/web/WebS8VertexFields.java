@@ -359,7 +359,7 @@ public interface WebS8VertexFields {
 	 * @param name
 	 * @param value
 	 */
-	public <T extends WebS8Object> void setObjectField(String name, T value);
+	public <T extends S8WebFrontObject> void setObjectField(String name, T value);
 
 
 	/**
@@ -368,14 +368,14 @@ public interface WebS8VertexFields {
 	 * @param name
 	 * @return
 	 */
-	public <T extends WebS8Object> T getObjectField(String name);
+	public <T extends S8WebFrontObject> T getObjectField(String name);
 	
 	
 
 
-	public <T extends WebS8Object> void setObjectListField(String name, List<T> value);
+	public <T extends S8WebFrontObject> void setObjectListField(String name, List<T> value);
 	
-	public <T extends WebS8Object> void setObjectListField(String name, T[] value);
+	public <T extends S8WebFrontObject> void setObjectListField(String name, T[] value);
 
 
 	
@@ -385,7 +385,7 @@ public interface WebS8VertexFields {
 	 * @param name
 	 * @return a <b>COPY</b> of the underlying list
 	 */
-	public <T extends WebS8Object> List<T> getObjectListField(String name);
+	public <T extends S8WebFrontObject> List<T> getObjectListField(String name);
 
 	
 	/**
@@ -394,7 +394,7 @@ public interface WebS8VertexFields {
 	 * @param name
 	 * @param obj
 	 */
-	public <T extends WebS8Object> void addObjToList(String name, T obj);
+	public <T extends S8WebFrontObject> void addObjToList(String name, T obj);
 	
 	
 	/**
@@ -403,7 +403,7 @@ public interface WebS8VertexFields {
 	 * @param name
 	 * @param obj
 	 */
-	public <T extends WebS8Object> void removeObjFromList(String name, T obj);
+	public <T extends S8WebFrontObject> void removeObjFromList(String name, T obj);
 
 	
 	

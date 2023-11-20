@@ -9,6 +9,14 @@ public interface S8User {
 	 */
 	public String getUsername();
 	
+	
+	
+	/**
+	 * password
+	 * @return
+	 */
+	public String getPassword();
+	
 
 	
 	/**

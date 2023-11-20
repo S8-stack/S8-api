@@ -32,8 +32,22 @@ public interface S8AsyncFlow {
 	public final static long HEAD_VERSION = -0x62L;
 
 
+	
+	/**
+	 * 
+	 * @return
+	 */
 	public abstract S8User getMe();
+	
 
+	/**
+	 * 
+	 * @param user
+	 */
+	public abstract void setMe(S8User user);
+
+	
+	
 
 
 	/**
@@ -384,5 +398,9 @@ public interface S8AsyncFlow {
 	 * @param generator
 	 */
 	public void deliver(int load, S8WebResourceGenerator generator);
+
+
+
+
 
 }

@@ -347,7 +347,7 @@ public interface WebS8VertexMethods {
 	 * @param name
 	 * @return
 	 */
-	public <T extends WebS8Object> void setObjectMethod(String name, ObjectNeFunction<T> function);
+	public <T extends S8WebFrontObject> void setObjectMethod(String name, ObjectNeFunction<T> function);
 
 
 	
