@@ -8,6 +8,7 @@
 module com.s8.api {
 	
 	
+	
 	exports com.s8.api.bytes;
 	
 	exports com.s8.api.exceptions;
@@ -17,6 +18,9 @@ module com.s8.api {
 	exports com.s8.api.flow.delivery;
 	exports com.s8.api.flow.metadatas;
 	exports com.s8.api.flow.outputs;
+	
+	exports com.s8.api.meta;
+	
 	
 	
 	/* <objects> */
