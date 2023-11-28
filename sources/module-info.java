@@ -19,8 +19,6 @@ module com.s8.api {
 	exports com.s8.api.flow.metadatas;
 	exports com.s8.api.flow.outputs;
 	
-	exports com.s8.api.meta;
-	
 	
 	
 	/* <objects> */
@@ -46,6 +44,7 @@ module com.s8.api {
 	exports com.s8.api.objects.web.lambdas.none;
 	exports com.s8.api.objects.web.lambdas.objects;
 	exports com.s8.api.objects.web.lambdas.primitives;
+	
 	
 	/* </objects> */
 	
