@@ -12,38 +12,43 @@ module com.s8.api {
 	exports com.s8.api.bytes;
 	
 	exports com.s8.api.exceptions;
-	
+
+	exports com.s8.api.annotations;
+
+	exports com.s8.api.serial;
 	
 	exports com.s8.api.flow;
+	
 	exports com.s8.api.flow.delivery;
-	exports com.s8.api.flow.metadatas;
-	exports com.s8.api.flow.outputs;
+	
+	exports com.s8.api.flow.record.objects;
+	exports com.s8.api.flow.record.requests;
+
+	exports com.s8.api.flow.space.objects;
+	exports com.s8.api.flow.space.requests;
+	
+	exports com.s8.api.flow.repository.objects;
+	exports com.s8.api.flow.repository.requests;
+		
 	
 	
 	
 	/* <objects> */
-	exports com.s8.api.objects.annotations;
 	
-	exports com.s8.api.objects.serial;
 	
-	exports com.s8.api.objects.table;
 	
-	exports com.s8.api.objects.space;
+	exports com.s8.api.web;
 	
-	exports com.s8.api.objects.repo;
+	exports com.s8.api.web.functions;
+	exports com.s8.api.web.functions.arrays;
+	exports com.s8.api.web.functions.none;
+	exports com.s8.api.web.functions.objects;
+	exports com.s8.api.web.functions.primitives;
 	
-	exports com.s8.api.objects.web;
-	
-	exports com.s8.api.objects.web.functions;
-	exports com.s8.api.objects.web.functions.arrays;
-	exports com.s8.api.objects.web.functions.none;
-	exports com.s8.api.objects.web.functions.objects;
-	exports com.s8.api.objects.web.functions.primitives;
-	
-	exports com.s8.api.objects.web.lambdas.arrays;
-	exports com.s8.api.objects.web.lambdas.none;
-	exports com.s8.api.objects.web.lambdas.objects;
-	exports com.s8.api.objects.web.lambdas.primitives;
+	exports com.s8.api.web.lambdas.arrays;
+	exports com.s8.api.web.lambdas.none;
+	exports com.s8.api.web.lambdas.objects;
+	exports com.s8.api.web.lambdas.primitives;
 	
 	
 	/* </objects> */
