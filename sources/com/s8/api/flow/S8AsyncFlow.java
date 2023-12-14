@@ -2,6 +2,7 @@ package com.s8.api.flow;
 
 import com.s8.api.bytes.Bool64;
 import com.s8.api.flow.delivery.S8WebResourceGenerator;
+import com.s8.api.flow.mail.SendMailS8Request;
 import com.s8.api.flow.record.objects.RecordS8Object;
 import com.s8.api.flow.record.requests.GetRecordS8Request;
 import com.s8.api.flow.record.requests.PutRecordS8Request;
@@ -78,6 +79,15 @@ public interface S8AsyncFlow {
 	 * @param runnable
 	 */
 	public abstract S8AsyncFlow runBlock(int force, S8CodeBlock runnable);
+	
+	
+
+	/**
+	 * 
+	 * @param profile
+	 * @param runnable
+	 */
+	public abstract S8AsyncFlow sendEMail(SendMailS8Request request);
 
 
 

@@ -21,6 +21,8 @@ module com.s8.api {
 	
 	exports com.s8.api.flow.delivery;
 	
+	exports com.s8.api.flow.mail;
+	
 	exports com.s8.api.flow.record.objects;
 	exports com.s8.api.flow.record.requests;
 
