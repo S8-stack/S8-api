@@ -30,7 +30,7 @@ public interface SendMailS8Request {
 	 * @param status
 	 * @param version
 	 */
-	public abstract void onSent(Status status);
+	public abstract void onSent(Status status, String message);
 	
 
 	/**
