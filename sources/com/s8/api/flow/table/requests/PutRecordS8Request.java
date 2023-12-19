@@ -1,11 +1,11 @@
-package com.s8.api.flow.record.requests;
+package com.s8.api.flow.table.requests;
 
-import com.s8.api.flow.record.objects.RecordS8Object;
+import com.s8.api.flow.table.objects.RowS8Object;
 
 public abstract class PutRecordS8Request {
 	
 	
-	public final RecordS8Object record;
+	public final RowS8Object record;
 	
 	public final boolean isOverridingAllowed;
 	
@@ -15,7 +15,7 @@ public abstract class PutRecordS8Request {
 	 * 
 	 * @param id
 	 */
-	public PutRecordS8Request(RecordS8Object record,
+	public PutRecordS8Request(RowS8Object record,
 			boolean isOverridingAllowed, 
 			boolean isImmediateHDWriteRequired) {
 		super();

@@ -23,8 +23,8 @@ module com.s8.api {
 	
 	exports com.s8.api.flow.mail;
 	
-	exports com.s8.api.flow.record.objects;
-	exports com.s8.api.flow.record.requests;
+	exports com.s8.api.flow.table.objects;
+	exports com.s8.api.flow.table.requests;
 
 	exports com.s8.api.flow.space.objects;
 	exports com.s8.api.flow.space.requests;

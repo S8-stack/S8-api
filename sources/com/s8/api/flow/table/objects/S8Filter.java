@@ -1,4 +1,4 @@
-package com.s8.api.flow.record.objects;
+package com.s8.api.flow.table.objects;
 
 @FunctionalInterface
 public interface S8Filter<T> {

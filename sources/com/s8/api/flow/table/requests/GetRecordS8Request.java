@@ -1,11 +1,19 @@
-package com.s8.api.flow.record.requests;
+package com.s8.api.flow.table.requests;
 
-import com.s8.api.flow.record.objects.RecordS8Object;
+import com.s8.api.flow.table.objects.RowS8Object;
 
+
+/**
+ * 
+ */
 public abstract class GetRecordS8Request {
 	
 	
+	/**
+	 * id
+	 */
 	public final String id;
+	
 	
 	/**
 	 * 
@@ -22,9 +30,19 @@ public abstract class GetRecordS8Request {
 		NOT_FOUND;
 	}
 	
-	public abstract void onSucceed(Status status, RecordS8Object record);
+	
+	/**
+	 * 
+	 * @param status
+	 * @param record
+	 */
+	public abstract void onSucceed(Status status, RowS8Object record);
 
 	
+	/**
+	 * 
+	 * @param exception
+	 */
 	public abstract void onFailed(Exception exception);
 
 }
