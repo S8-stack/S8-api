@@ -79,7 +79,7 @@ public interface S8AsyncFlow {
 	 * @param profile
 	 * @param runnable
 	 */
-	public abstract S8AsyncFlow runBlock(int force, S8CodeBlock runnable);
+	public abstract void runBlock(int force, S8CodeBlock runnable);
 	
 	
 
@@ -88,7 +88,7 @@ public interface S8AsyncFlow {
 	 * @param profile
 	 * @param runnable
 	 */
-	public abstract S8AsyncFlow sendEMail(SendMailS8Request request);
+	public abstract void sendEMail(SendMailS8Request request);
 
 
 	
@@ -97,7 +97,7 @@ public interface S8AsyncFlow {
 	 * @param request
 	 * @return
 	 */
-	public abstract S8AsyncFlow createTable(CreateTableS8Request request);
+	public abstract void createTable(CreateTableS8Request request);
 	
 	
 	/**
@@ -107,7 +107,7 @@ public interface S8AsyncFlow {
 	 * @param onException
 	 * @return 
 	 */
-	public abstract S8AsyncFlow then(GetRowS8Request request);
+	public abstract void getRow(GetRowS8Request request);
 	
 
 	/**
@@ -117,7 +117,7 @@ public interface S8AsyncFlow {
 	 * @param onException
 	 * @return 
 	 */
-	public abstract S8AsyncFlow then(PutRowS8Request request);
+	public abstract void putRow(PutRowS8Request request);
 	
 	
 	/**
@@ -126,7 +126,7 @@ public interface S8AsyncFlow {
 	 * @param onException
 	 * @return 
 	 */
-	public abstract <T extends RowS8Object> S8AsyncFlow then(SelectRowsS8Request<T> request);
+	public abstract <T extends RowS8Object> void selectRows(SelectRowsS8Request<T> request);
 
 	
 	
@@ -137,7 +137,7 @@ public interface S8AsyncFlow {
 	 * @param onException
 	 * @return 
 	 */
-	public abstract S8AsyncFlow then(CreateSpaceS8Request request);
+	public abstract void createSpace(CreateSpaceS8Request request);
 	
 	/**
 	 * 
@@ -146,7 +146,7 @@ public interface S8AsyncFlow {
 	 * @param onException
 	 * @return 
 	 */
-	public abstract S8AsyncFlow then(ExposeSpaceS8Request request);
+	public abstract void exposeSpace(ExposeSpaceS8Request request);
 
 
 	/**
@@ -156,7 +156,7 @@ public interface S8AsyncFlow {
 	 * @param onException
 	 * @return 
 	 */
-	public abstract S8AsyncFlow then(AccessSpaceS8Request request);
+	public abstract void accessSpace(AccessSpaceS8Request request);
 	
 
 
@@ -168,7 +168,7 @@ public interface S8AsyncFlow {
 	 * @param post
 	 * @return 
 	 */
-	public abstract S8AsyncFlow then(CreateRepositoryS8Request request);
+	public abstract void createRepository(CreateRepositoryS8Request request);
 	
 	
 	/**
@@ -176,7 +176,7 @@ public interface S8AsyncFlow {
 	 * @param request
 	 * @return
 	 */
-	public abstract S8AsyncFlow then(GetRepositoryMetadataS8Request request);
+	public abstract void getRepository(GetRepositoryMetadataS8Request request);
 	
 	
 	/**
@@ -184,7 +184,7 @@ public interface S8AsyncFlow {
 	 * @param request
 	 * @return
 	 */
-	public abstract S8AsyncFlow then(GetBranchMetadataS8Request request);
+	public abstract void getBranch(GetBranchMetadataS8Request request);
 
 	
 	/**
@@ -193,7 +193,7 @@ public interface S8AsyncFlow {
 	 * @param post
 	 * @return 
 	 */
-	public abstract S8AsyncFlow then(ForkRepositoryS8Request request);	
+	public abstract void forkRepository(ForkRepositoryS8Request request);	
 	
 	
 	/**
@@ -202,7 +202,7 @@ public interface S8AsyncFlow {
 	 * @param post
 	 * @return 
 	 */
-	public abstract S8AsyncFlow then(ForkBranchS8Request request);
+	public abstract void forkBranch(ForkBranchS8Request request);
 	
 	
 	/**
@@ -211,7 +211,7 @@ public interface S8AsyncFlow {
 	 * @param post
 	 * @return 
 	 */
-	public abstract S8AsyncFlow then(CommitBranchS8Request request);
+	public abstract void commitBranch(CommitBranchS8Request request);
 
 	
 	/**
@@ -219,7 +219,7 @@ public interface S8AsyncFlow {
 	 * @param pre
 	 * @param post
 	 */
-	public abstract S8AsyncFlow then(CloneBranchS8Request request);
+	public abstract void cloneBranch(CloneBranchS8Request request);
 
 	
 

@@ -31,6 +31,7 @@ public abstract class CreateSpaceS8Request {
 
 	public enum Status {
 		OK,
+		INVALID_SPACE_ID,
 		SPACE_ID_CONFLICT;
 	}
 
