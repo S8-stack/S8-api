@@ -6,26 +6,30 @@ import com.s8.api.flow.table.objects.RowS8Object;
 /**
  * 
  */
-public abstract class GetRecordS8Request {
+public abstract class GetRowS8Request {
 	
+	
+	public final String tableId;
 	
 	/**
 	 * id
 	 */
-	public final String id;
+	public final String rowKey;
 	
 	
 	/**
 	 * 
 	 * @param id
 	 */
-	public GetRecordS8Request(String id) {
+	public GetRowS8Request(String tableId, String rowKey) {
 		super();
-		this.id = id;
+		this.tableId = tableId;
+		this.rowKey = rowKey;
 	}
 
 
 	public enum Status {
+		TABLE_DOES_NOT_EXIST,
 		OK,
 		NOT_FOUND;
 	}

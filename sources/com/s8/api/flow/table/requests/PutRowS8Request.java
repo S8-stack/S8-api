@@ -2,10 +2,12 @@ package com.s8.api.flow.table.requests;
 
 import com.s8.api.flow.table.objects.RowS8Object;
 
-public abstract class PutRecordS8Request {
+public abstract class PutRowS8Request {
 	
 	
-	public final RowS8Object record;
+	public final String tableId;
+	
+	public final RowS8Object row;
 	
 	public final boolean isOverridingAllowed;
 	
@@ -15,11 +17,14 @@ public abstract class PutRecordS8Request {
 	 * 
 	 * @param id
 	 */
-	public PutRecordS8Request(RowS8Object record,
+	public PutRowS8Request(
+			String tableId,
+			RowS8Object row,
 			boolean isOverridingAllowed, 
 			boolean isImmediateHDWriteRequired) {
 		super();
-		this.record = record;
+		this.tableId = tableId;
+		this.row = row;
 		this.isOverridingAllowed = isOverridingAllowed;
 		this.isImmediateHDWriteRequired = isImmediateHDWriteRequired;
 	}
@@ -28,11 +33,12 @@ public abstract class PutRecordS8Request {
 
 
 	public enum Status {
+		TABLE_DOES_NOT_EXIST,
 		OK,
 		ID_CONFLICT;
 	}
 	
-	public abstract void onResponse(Status status);
+	public abstract void onSucceed(Status status);
 
 	
 	public abstract void onError(Exception exception);

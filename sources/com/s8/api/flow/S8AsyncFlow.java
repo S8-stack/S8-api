@@ -14,9 +14,10 @@ import com.s8.api.flow.space.requests.AccessSpaceS8Request;
 import com.s8.api.flow.space.requests.CreateSpaceS8Request;
 import com.s8.api.flow.space.requests.ExposeSpaceS8Request;
 import com.s8.api.flow.table.objects.RowS8Object;
-import com.s8.api.flow.table.requests.GetRecordS8Request;
-import com.s8.api.flow.table.requests.PutRecordS8Request;
-import com.s8.api.flow.table.requests.SelectRecordsS8Request;
+import com.s8.api.flow.table.requests.CreateTableS8Request;
+import com.s8.api.flow.table.requests.GetRowS8Request;
+import com.s8.api.flow.table.requests.PutRowS8Request;
+import com.s8.api.flow.table.requests.SelectRowsS8Request;
 
 
 /**
@@ -90,7 +91,15 @@ public interface S8AsyncFlow {
 	public abstract S8AsyncFlow sendEMail(SendMailS8Request request);
 
 
-
+	
+	/**
+	 * 
+	 * @param request
+	 * @return
+	 */
+	public abstract S8AsyncFlow createTable(CreateTableS8Request request);
+	
+	
 	/**
 	 * 
 	 * @param username
@@ -98,7 +107,7 @@ public interface S8AsyncFlow {
 	 * @param onException
 	 * @return 
 	 */
-	public abstract S8AsyncFlow then(GetRecordS8Request request);
+	public abstract S8AsyncFlow then(GetRowS8Request request);
 	
 
 	/**
@@ -108,7 +117,7 @@ public interface S8AsyncFlow {
 	 * @param onException
 	 * @return 
 	 */
-	public abstract S8AsyncFlow then(PutRecordS8Request request);
+	public abstract S8AsyncFlow then(PutRowS8Request request);
 	
 	
 	/**
@@ -117,7 +126,7 @@ public interface S8AsyncFlow {
 	 * @param onException
 	 * @return 
 	 */
-	public abstract <T extends RowS8Object> S8AsyncFlow then(SelectRecordsS8Request<T> request);
+	public abstract <T extends RowS8Object> S8AsyncFlow then(SelectRowsS8Request<T> request);
 
 	
 	
