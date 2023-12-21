@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "/S8-api/*": [ "../../../S8-api/web-sources/S8-api/*" ]
+    }
+  }
+}
