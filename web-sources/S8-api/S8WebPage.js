@@ -34,14 +34,14 @@ export class S8WebPage {
     /**
      * 
      * @param {HTMLElement} target 
-     * @param {string} name 
+     * @param {string} pathname 
      * @param {number} width 
      * @param {number} height 
      * @returns {void}
      */
-    SVG_insertByName(target, name, width, height) {
+    SVG_insertByPathname(target, pathname, width, height) {
         /* to be overridden */
-        console.log(`insert SVG ${target} withe ${name} (${width} x ${height})`);
+        console.log(`insert SVG ${target} withe ${pathname} (${width} x ${height})`);
     }
 
 

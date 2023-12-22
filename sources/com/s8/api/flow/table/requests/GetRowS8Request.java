@@ -30,8 +30,7 @@ public abstract class GetRowS8Request {
 
 	public enum Status {
 		TABLE_DOES_NOT_EXIST,
-		OK,
-		NOT_FOUND;
+		OK;
 	}
 	
 	
