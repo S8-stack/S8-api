@@ -21,13 +21,13 @@ export class S8WebServer {
 
 
     /**
-     * @param {ArrayBuffer} requestArrayBuffer 
+     * @param {Uint8Array} requestArray 
      * @param {Function} responseCallback 
      */
-    sendRequest_HTTP2_POST(requestArrayBuffer, responseCallback) {
+    sendRequest_HTTP2_POST(requestArray, responseCallback) {
 
         /* to be overridden */
-        console.log(`POST: ${requestArrayBuffer} = ${responseCallback}`);
+        console.log(`POST: ${requestArray} = ${responseCallback}`);
     }
 
 }
