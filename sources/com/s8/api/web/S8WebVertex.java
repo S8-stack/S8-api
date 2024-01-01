@@ -48,14 +48,14 @@ public interface S8WebVertex {
 	 * 
 	 * @return the vertex fields handling module
 	 */
-	public WebS8VertexFields fields();
+	public S8WebVertexOutbound outbound();
 	
 
 	/**
 	 * 
 	 * @return the vertex methods handling module
 	 */
-	public WebS8VertexMethods methods();
+	public S8WebVertexInbound inbound();
 	
 	
 	/**

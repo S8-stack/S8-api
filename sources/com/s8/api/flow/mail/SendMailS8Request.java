@@ -5,7 +5,15 @@ import java.io.IOException;
 /**
  * 
  */
-public interface SendMailS8Request {
+public abstract class SendMailS8Request {
+	
+	
+	public final boolean isOutOfFlow;
+	
+	public SendMailS8Request(boolean isOutOfFlow) {
+		super();
+		this.isOutOfFlow = isOutOfFlow;
+	}
 
 	
 	/**
@@ -13,7 +21,7 @@ public interface SendMailS8Request {
 	 * @param mail
 	 * @throws IOException
 	 */
-	public void compose(S8Mail mail) throws IOException;
+	public abstract void compose(S8Mail mail) throws IOException;
 	
 	
 

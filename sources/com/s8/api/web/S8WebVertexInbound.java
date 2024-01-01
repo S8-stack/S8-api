@@ -50,7 +50,7 @@ import com.s8.api.web.lambdas.primitives.UInt8Lambda;
  * @author pierreconvert
  *
  */
-public interface WebS8VertexMethods {
+public interface S8WebVertexInbound {
 
 
 
