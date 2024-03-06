@@ -2,6 +2,10 @@ package com.s8.api.flow.mail;
 
 import java.io.IOException;
 
+
+/**
+ * 
+ */
 public interface S8Mail {
 
 	
@@ -30,14 +34,14 @@ public interface S8Mail {
 	
 	
 	
-	public void setDisplayedSender(String name) throws IOException;
+	public void setDisplayedSender(String name);
 	
 	/**
 	 * 
 	 * @param email
 	 * @throws IOException 
 	 */
-	public void setRecipient(String email) throws IOException;
+	public void setRecipient(String email);
 	
 	
 	
@@ -46,13 +50,24 @@ public interface S8Mail {
 	 * @param text
 	 * @throws IOException 
 	 */
-	public void setSubject(String text) throws IOException;
+	public void setSubject(String text);
 	
+	
+	
+
+	/**
+	 * 
+	 * @param CSS_classname
+	 * @param CSS_style
+	 * @throws IOException
+	 */
+	public void HTML_setWrapperStyle(String CSS_classname, String CSS_style);
 	
 	/**
 	 * 
 	 * @param text
 	 * @throws IOException 
 	 */
-	public void appendText(String text) throws IOException;
+	public void HTML_appendBaseElement(String tag, String CSS_classname, String CSS_style, String innerHTMLText);
+	
 }

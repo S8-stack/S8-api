@@ -11,13 +11,13 @@ export class S8Context {
     /**
      * @type{S8WebPage}
      */
-    page = null;
+    page = new S8WebPage();
 
 
     /**
      * @type{S8WebServer}
      */
-    server = null;
+    server = new S8WebServer();
 }
 
 
