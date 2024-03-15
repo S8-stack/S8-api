@@ -410,7 +410,7 @@ public interface S8WebVertexInbound {
 	 * @param name
 	 * @return
 	 */
-	public <T extends S8WebFrontObject> void setObjectMethod(String name, ObjectNeFunction<T> function);
+	public <T extends S8WebObject> void setObjectMethod(String name, ObjectNeFunction<T> function);
 
 
 

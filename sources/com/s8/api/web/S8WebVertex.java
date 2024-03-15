@@ -30,7 +30,7 @@ public interface S8WebVertex {
 	 * Object attached to this vertex
 	 * @return
 	 */
-	public S8WebFrontObject getAttachedObject();
+	public S8WebObject getAttachedObject();
 
 
 

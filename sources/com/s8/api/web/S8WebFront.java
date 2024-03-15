@@ -15,6 +15,6 @@ public interface S8WebFront {
 	 * @param object
 	 * @return
 	 */
-	public S8WebVertex createVertex(String typeName, S8WebFrontObject object);
+	public S8WebVertex createVertex(String typeName, S8WebObject object);
 
 }

@@ -205,18 +205,18 @@ public interface S8WebVertexOutbound {
 	 * @param name
 	 * @param value
 	 */
-	public <T extends S8WebFrontObject> void setObjectField(String name, T value);
+	public <T extends S8WebObject> void setObjectField(String name, T value);
 
 
 	
 
 
-	public <T extends S8WebFrontObject> void setObjectListField(String name, List<T> value);
+	public <T extends S8WebObject> void setObjectListField(String name, List<T> value);
 	
-	public <T extends S8WebFrontObject> void setObjectListField(String name, T[] value);
+	public <T extends S8WebObject> void setObjectListField(String name, T[] value);
 	
 	
-	public <T extends S8WebFrontObject> void setObjectListField(String name, T singleValue);
+	public <T extends S8WebObject> void setObjectListField(String name, T singleValue);
 
 	
 	
