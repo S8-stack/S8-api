@@ -1,6 +1,6 @@
 
-import { S8WebPage } from "./S8WebPage.js";
-import { S8WebServer } from "./S8WebServer.js";
+import { S8Page } from "./S8Page.js";
+import { S8Server } from "./S8Server.js";
 
 
 /**
@@ -9,15 +9,15 @@ import { S8WebServer } from "./S8WebServer.js";
 export class S8Context {
 
     /**
-     * @type{S8WebPage}
+     * @type{S8Page}
      */
-    page = new S8WebPage();
+    page = new S8Page();
 
 
     /**
-     * @type{S8WebServer}
+     * @type{S8Server}
      */
-    server = new S8WebServer();
+    server = new S8Server();
 }
 
 

@@ -7,17 +7,16 @@ export class S8Vertex {
 
 	
 	/**
-	 * 
+	 * @abstract
 	 * @param {string} methodName 
 	 */
 	runVoid(methodName) { 
 		/* to be overridden */
-		console.log(`runVoid method : ${methodName} with no args MUST be overriden!`);
+		console.log(`S8Error running ${methodName} : runVoid method MUST be overriden!`);
 	}
 
 
 	/**
-	 * 
 	 * @param {string} methodName 
 	 * @param {boolean} argValue 
 	 */

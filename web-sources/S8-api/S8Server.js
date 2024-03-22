@@ -3,7 +3,7 @@
 /**
  * Define the interface of the context
  */
-export class S8WebServer {
+export class S8Server {
 
    
 

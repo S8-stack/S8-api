@@ -1,13 +1,17 @@
 
 
 /**
+ * 
+ * @abstract
+ * @type{S8Page}
  * Define the interface of the context
  */
-export class S8WebPage {
+export class S8Page {
 
     /**
      * Use this method to load CSS file on the page
      * 
+     * @abstract
      * @param {string} name 
      * @returns {void}
      */
@@ -18,7 +22,7 @@ export class S8WebPage {
 
 
     /**
-     * 
+     * @abstract
      * @param {HTMLElement} target 
      * @param {number} code 
      * @param {number} width 
@@ -32,7 +36,7 @@ export class S8WebPage {
 
 
     /**
-     * 
+     * @abstract
      * @param {HTMLElement} target 
      * @param {string} pathname 
      * @param {number} width 
