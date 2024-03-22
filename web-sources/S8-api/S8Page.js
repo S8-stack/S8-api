@@ -66,29 +66,47 @@ export class S8Page {
      * @param {HTMLElement} node 
      * @returns {void}
      */
-	HTML_setRootElement(node) {
-		 /* to be overridden */
-         console.log(node);
-	}
+    HTML_setRootElement(node) {
+        /* to be overridden */
+        console.log(node);
+    }
 
+
+    /**
+    * @abstract
+    * @param {HTMLElement} node 
+    * @returns {void}
+    */
+    HTML_setPopover() {
+        /* to be overridden */
+        console.log(node);
+    }
+
+    /**
+    * @abstract
+    * @returns {void}
+    */
+    HTML_clearPopover() {
+        console.log("to be overriden");
+    }
 
 
 
     /**
-	 * 
-	 * @param {Object} object 
-	 */
-	setFocusOn(object) {
+     * 
+     * @param {Object} object 
+     */
+    setFocusOn(object) {
         /* to be overridden */
         console.log(object);
-	}
-    
+    }
 
-	/**
-	 * 
-	 */
-	loseFocus(){
-		console.log("To be overridden");
-	}
+
+    /**
+     * 
+     */
+    loseFocus() {
+        console.log("To be overridden");
+    }
 
 }
