@@ -62,11 +62,11 @@ export class S8Page {
 
 
     /**
-     * 
+     * @abstract
      * @param {HTMLElement} node 
      * @returns {void}
      */
-	setRoot(node) {
+	HTML_setRootElement(node) {
 		 /* to be overridden */
          console.log(node);
 	}
