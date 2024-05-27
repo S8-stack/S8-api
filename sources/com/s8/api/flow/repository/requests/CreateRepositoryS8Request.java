@@ -39,6 +39,11 @@ public abstract class CreateRepositoryS8Request {
 	public final String initialCommitComment;
 	
 	
+	public boolean isResourceSaved = false;
+	
+	public boolean isOverrideEnabled = false;
+	
+	
 	public CreateRepositoryS8Request(
 			String repositoryName, 
 			String repositoryAddress, 
@@ -61,6 +66,7 @@ public abstract class CreateRepositoryS8Request {
 		OK,
 		IS_ADDRESS_CONFLICTING;
 	}
+	
 	
 	
 	/**

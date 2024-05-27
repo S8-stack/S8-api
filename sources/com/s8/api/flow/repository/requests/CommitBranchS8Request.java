@@ -19,7 +19,6 @@ public abstract class CommitBranchS8Request {
 	
 	
 	
-	
 	public CommitBranchS8Request(String repositoryAddress, String branchId, RepoS8Object[] objects, String author,
 			String comment) {
 		super();
