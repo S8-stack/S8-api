@@ -2,6 +2,8 @@ package com.s8.api.web;
 
 import java.util.List;
 
+import com.s8.api.serial.S8Serializable;
+
 public interface S8WebVertexOutbound {
 
 
@@ -197,6 +199,24 @@ public interface S8WebVertexOutbound {
 	 * @param value
 	 */
 	public void setStringUTF8ArrayField(String name, String[] value);
+	
+	
+	/**
+	 * 
+	 * @param name
+	 * @param value
+	 */
+	public void setSerializableField(String name, S8Serializable value);
+
+
+
+	
+	/**
+	 * 
+	 * @param name
+	 * @param value
+	 */
+	public void setSerializableArrayField(String name, S8Serializable[] value);
 
 
 	/**

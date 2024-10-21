@@ -58,5 +58,14 @@ public interface S8SerialPrototype<S extends S8Serializable> {
 	 * @return
 	 */
 	public abstract boolean hasDelta(S left, S right);
+	
+	
+	
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public abstract Class<?> getSerialType();
 
 }
