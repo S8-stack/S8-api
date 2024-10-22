@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.s8.api.serial.S8Serializable;
 
+
 public interface S8WebVertexOutbound {
 
 
@@ -205,6 +206,8 @@ public interface S8WebVertexOutbound {
 	 * 
 	 * @param name
 	 * @param value
+	 * @throws NeException 
+	 * @throws S8WebException 
 	 */
 	public <S extends S8Serializable> void setSerializableField(String name, S value);
 
