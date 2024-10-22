@@ -206,7 +206,7 @@ public interface S8WebVertexOutbound {
 	 * @param name
 	 * @param value
 	 */
-	public void setSerializableField(String name, S8Serializable value);
+	public <S extends S8Serializable> void setSerializableField(String name, S value);
 
 
 
@@ -216,7 +216,7 @@ public interface S8WebVertexOutbound {
 	 * @param name
 	 * @param value
 	 */
-	public void setSerializableArrayField(String name, S8Serializable[] value);
+	public <S extends S8Serializable> void setSerializableArrayField(String name, S[] value);
 
 
 	/**
