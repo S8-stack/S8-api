@@ -2,7 +2,7 @@ package com.s8.api.web;
 
 import java.util.List;
 
-import com.s8.api.serial.S8Serializable;
+import com.s8.api.serial.S8ExplicitSerializable;
 
 
 public interface S8WebVertexOutbound {
@@ -209,7 +209,7 @@ public interface S8WebVertexOutbound {
 	 * @throws NeException 
 	 * @throws S8WebException 
 	 */
-	public <S extends S8Serializable> void setSerializableField(String name, S value);
+	public <S extends S8ExplicitSerializable> void setSerializableField(String name, S value);
 
 
 
@@ -219,7 +219,7 @@ public interface S8WebVertexOutbound {
 	 * @param name
 	 * @param value
 	 */
-	public <S extends S8Serializable> void setSerializableArrayField(String name, S[] value);
+	public <S extends S8ExplicitSerializable> void setExplicitSerializableArrayField(String name, S[] value);
 
 
 	/**

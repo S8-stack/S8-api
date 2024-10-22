@@ -67,13 +67,6 @@ public interface S8SerialPrototype<S extends S8Serializable> {
 	 * @return
 	 */
 	public abstract Class<?> getSerialType();
-	
-	
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public byte[] getSignature();
+
 
 }
