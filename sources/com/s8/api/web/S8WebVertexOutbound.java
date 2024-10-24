@@ -220,6 +220,15 @@ public interface S8WebVertexOutbound {
 	 * @param value
 	 */
 	public <S extends S8ExplicitSerializable> void setExplicitSerializableArrayField(String name, S[] value);
+	
+
+	
+	/**
+	 * 
+	 * @param name
+	 * @param value
+	 */
+	public <S extends S8ExplicitSerializable> void setExplicitSerializableArrayField(String name, List<S> value);
 
 
 	/**
