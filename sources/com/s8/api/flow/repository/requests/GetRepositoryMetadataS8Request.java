@@ -4,6 +4,11 @@ import com.s8.api.flow.repository.objects.S8RepositoryMetadata;
 
 /**
  * 
+ * A Request object to get repository metadata
+ * 
+ * @author Pierre Convert
+ * Copyright (C) 2025, Pierre Convert. All rights reserved.
+ * 
  */
 public abstract class GetRepositoryMetadataS8Request {
 	
@@ -27,14 +32,18 @@ public abstract class GetRepositoryMetadataS8Request {
 	
 	/**
 	 * 
-	 * @param status
-	 * @param metadata
+	 * Callback method run upon successful request execution.
+	 * 
+	 * @param status the status returned
+	 * @param metadata the data returned
 	 */
 	public abstract void onSucceed(Status status, S8RepositoryMetadata metadata);
 	
 	/**
 	 * 
-	 * @param errorMessage
+	 * On error callback method
+	 * 
+	 * @param exception the exception raised during exception
 	 */
 	public abstract void onFailed(Exception exception);
 	

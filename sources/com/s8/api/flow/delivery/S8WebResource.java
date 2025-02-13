@@ -2,6 +2,9 @@ package com.s8.api.flow.delivery;
 
 
 
+/**
+ * A Web resource abstraction
+ */
 public class S8WebResource {
 
 	
@@ -18,9 +21,9 @@ public class S8WebResource {
 
 	
 	/**
-	 * 
-	 * @param type
-	 * @param data
+	 * Main constructor
+	 * @param type the resources type (MIME)
+	 * @param data the resource content
 	 */
 	public S8WebResource(String type, byte[] data) {
 		super();

@@ -7,18 +7,20 @@ public interface WebS8VertexProviders {
 
 
 	/**
+	 * Get the resource generator
 	 * 
-	 * @param ordinal
-	 * @return
+	 * @param ordinal the ordinal (index) of the generator
+	 * @return the ressource generator
 	 */
 	public S8WebResourceGenerator getGenerator(int ordinal);
 	
 
 	
 	/**
+	 * Set Providers
 	 * 
-	 * @param name
-	 * @param function
+	 * @param name the name attached to the feature
+	 * @param generator the ressource generator attached
 	 */
 	public void setRawProvider(String name, S8WebResourceGenerator generator);
 

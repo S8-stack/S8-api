@@ -3,15 +3,19 @@ package com.s8.api.flow;
 
 /**
  * 
- * @author pierreconvert
+ * An simple Runnable block (most basic task of the {@code S8AsyncFlow}).
+ * 
+ * @author Pierre Convert
+ * Copyright (C) 2025, Pierre Convert. All rights reserved.
  *
+ * @see S8AsyncFlow
  */
+@FunctionalInterface
 public interface S8CodeBlock {
 
 	
 	/**
-	 * 
-	 * @throws Exception
+	 * The function method
 	 */
 	public void run();
 	

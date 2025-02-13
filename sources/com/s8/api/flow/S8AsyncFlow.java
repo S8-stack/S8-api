@@ -21,34 +21,52 @@ import com.s8.api.flow.table.requests.SelectRowsS8Request;
 
 
 /**
+ * The main orchestratino flow of the S8 Stack.
  * 
- * @author pierreconvert
- * Copyright (c) 2022, Pierre Convert. All rights reserved.
+ * @author Pierre Convert
+ * Copyright (c) 2025, Pierre Convert. All rights reserved.
  *
  */
 public interface S8AsyncFlow {
 	
 	
+	/**
+	 * CREATE_SPACE_IF_NOT_PRESENT
+	 */
 	public final static long CREATE_SPACE_IF_NOT_PRESENT = Bool64.BIT02;
 	
+	
+	/**
+	 * SAVE_IMMEDIATELY_AFTER
+	 */
 	public final static long SAVE_IMMEDIATELY_AFTER = Bool64.BIT03;
 	
+	
+	/**
+	 * SHOULD_NOT_OVERRIDE
+	 */
 	public final static long SHOULD_NOT_OVERRIDE = Bool64.BIT04;
 	
+	
+	/**
+	 * TAG for HEAD version of a repository stats
+	 */
 	public final static long HEAD_VERSION = -0x62L;
 
 
 	
 	/**
+	 * Return the flow onwer.
 	 * 
-	 * @return
+	 * @return the user
 	 */
 	public abstract S8User getMe();
 	
 
 	/**
+	 * Define a user a flow owner.
 	 * 
-	 * @param user
+	 * @param user the user.
 	 */
 	public abstract void setMe(S8User user);
 
@@ -56,9 +74,10 @@ public interface S8AsyncFlow {
 	
 
 
+	
 	/**
-	 * 
-	 * @return
+	 * Get my space id as a user.
+	 * @return the user main space id.
 	 */
 	public default String getMySpaceId() {
 		S8User me = getMe();
@@ -71,153 +90,132 @@ public interface S8AsyncFlow {
 	}
 
 
-
-
-
 	/**
+	 * Run a block of code.
 	 * 
-	 * @param profile
-	 * @param runnable
+	 * @param force indicator of the amount of resource to be mobilized
+	 * @param runnable the code block to be run
 	 */
 	public abstract void runBlock(int force, S8CodeBlock runnable);
 	
 	
 
 	/**
+	 * Send an email.
 	 * 
-	 * @param profile
-	 * @param runnable
+	 * @param request The request Object
 	 */
 	public abstract void sendEMail(SendMailS8Request request);
 
 
 	
+	
 	/**
+	 * Create a table.
 	 * 
-	 * @param request
-	 * @return
+	 * @param request The request Object
 	 */
 	public abstract void createTable(CreateTableS8Request request);
 	
 	
+	
 	/**
+	 * Get a row from a table.
 	 * 
-	 * @param username
-	 * @param user
-	 * @param onException
-	 * @return 
+	 * @param request The request object
 	 */
 	public abstract void getRow(GetRowS8Request request);
 	
 
+	
 	/**
+	 * Put a row in a table.
 	 * 
-	 * @param id
-	 * @param user
-	 * @param onException
-	 * @return 
+	 * @param request the request object
 	 */
 	public abstract void putRow(PutRowS8Request request);
 	
 	
 	/**
-	 * 
-	 * @param user
-	 * @param onException
-	 * @return 
+	 * Select many rows in a table.
+	 * @param request the request object
+	 * @param <T> Row type
 	 */
 	public abstract <T extends RowS8Object> void selectRows(SelectRowsS8Request<T> request);
 
 	
 	
 	/**
-	 * 
-	 * @param spaceId
-	 * @param onAccessed
-	 * @param onException
-	 * @return 
+	 * Create a space.
+	 * @param request the request object
 	 */
 	public abstract void createSpace(CreateSpaceS8Request request);
 	
 	/**
-	 * 
-	 * @param exposure
-	 * @param onRebased
-	 * @param onException
-	 * @return 
+	 * Expose a space.
+	 * @param request the request object
 	 */
 	public abstract void exposeSpace(ExposeSpaceS8Request request);
 
 
 	/**
-	 * 
-	 * @param spaceId
-	 * @param onAccessed
-	 * @param onException
-	 * @return 
+	 * Access a space.
+	 * @param request the request object
 	 */
 	public abstract void accessSpace(AccessSpaceS8Request request);
 	
 
 
 	/**
+	 * Create a new repository.
 	 * Note that:
 	 * - initiator will become owner of the repository
 	 * - initiator will become owner of the main branch
-	 * @param pre
-	 * @param post
-	 * @return 
+	 * @param request the request object
 	 */
 	public abstract void createRepository(CreateRepositoryS8Request request);
 	
 	
 	/**
-	 * 
-	 * @param request
-	 * @return
+	 * Get a repository metadata
+	 * @param request the request object
 	 */
 	public abstract void getRepository(GetRepositoryMetadataS8Request request);
 	
 	
 	/**
-	 * 
-	 * @param request
-	 * @return
+	 * Get branch
+	 * @param request the request object
 	 */
 	public abstract void getBranch(GetBranchMetadataS8Request request);
 
 	
 	/**
-	 * 
-	 * @param pre
-	 * @param post
-	 * @return 
+	 * Fork an entire repository
+	 * @param request the request object
 	 */
 	public abstract void forkRepository(ForkRepositoryS8Request request);	
 	
 	
 	/**
-	 * 
-	 * @param pre
-	 * @param post
-	 * @return 
+	 * Fork the branch of a repository
+	 * @param request the request object
 	 */
 	public abstract void forkBranch(ForkBranchS8Request request);
 	
 	
+	
 	/**
-	 * 
-	 * @param pre
-	 * @param post
-	 * @return 
+	 * Commit a branch to a repository
+	 * @param request the request object
 	 */
 	public abstract void commitBranch(CommitBranchS8Request request);
 
 	
 	/**
+	 * Clone the branch of a repository
 	 * 
-	 * @param pre
-	 * @param post
+	 * @param request the request object
 	 */
 	public abstract void cloneBranch(CloneBranchS8Request request);
 

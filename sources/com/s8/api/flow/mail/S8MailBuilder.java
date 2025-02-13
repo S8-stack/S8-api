@@ -1,12 +1,15 @@
 package com.s8.api.flow.mail;
 
-import java.io.IOException;
-
-
 /**
  * 
+ * A Simple Mail Builder interface.
+ * 
+ * 
+ * @author Pierre Convert
+ * Copyright (C) 2025, Pierre Convert. All rights reserved.
+ * 
  */
-public interface S8Mail {
+public interface S8MailBuilder {
 
 	
 	
@@ -34,21 +37,23 @@ public interface S8Mail {
 	
 	
 	
+	/**
+	 * Set the displayed name.
+	 * @param name the displayed name
+	 */
 	public void setDisplayedSender(String name);
 	
 	/**
-	 * 
-	 * @param email
-	 * @throws IOException 
+	 * Set the recipient email
+	 * @param email the email of the recipient
 	 */
 	public void setRecipient(String email);
 	
 	
 	
 	/**
-	 * 
-	 * @param text
-	 * @throws IOException 
+	 * Set the subject
+	 * @param text the subject
 	 */
 	public void setSubject(String text);
 	
@@ -56,17 +61,20 @@ public interface S8Mail {
 	
 
 	/**
-	 * 
-	 * @param CSS_classname
-	 * @param CSS_style
-	 * @throws IOException
+	 * Set wrapper style
+	 * @param CSS_classname the CSS classname
+	 * @param CSS_style the CSS style
 	 */
 	public void HTML_setWrapperStyle(String CSS_classname, String CSS_style);
 	
+	
 	/**
+	 * Append base element
 	 * 
-	 * @param text
-	 * @throws IOException 
+	 * @param tag the tag
+	 * @param CSS_classname the class name
+	 * @param CSS_style the style
+	 * @param innerHTMLText the inner html content
 	 */
 	public void HTML_appendBaseElement(String tag, String CSS_classname, String CSS_style, String innerHTMLText);
 	

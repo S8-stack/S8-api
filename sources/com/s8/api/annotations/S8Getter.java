@@ -29,11 +29,15 @@ public @interface S8Getter {
 	/**
 	 * code for quick access to the method
 	 * 
-	 * @return
+	 * @return the name of the field this getter is attached to
 	 */
 	public String name();
 	
 	
+	/**
+	 * Export settings for migration purposes
+	 * @return the export settings
+	 */
 	public String export() default "(default)";
 	
 	

@@ -1,9 +1,9 @@
 /**
  * 
- */
-/**
- * @author pierreconvert
- *
+ * S8 API Module
+ * 
+ * @author Pierre Convert Copyright (C) 2025, Pierre Convert. All rights
+ *         reserved.
  */
 module com.s8.api {
 	

@@ -2,10 +2,10 @@ package com.s8.api.bytes;
 
 
 /**
- * 
+ * A utility class for handling bitwise boolean operations
  * 
  * @author Pierre Convert
- * Copyright (C) 2022, Pierre Convert. All rights reserved.
+ * Copyright (c) 2025, Pierre Convert. All rights reserved.
  * 
  */
 public class Bool64 {
@@ -101,25 +101,44 @@ public class Bool64 {
 	
 	private final long value;
 	
+	
+	/**
+	 * Main constructor
+	 * @param value the final value to be tested
+	 */
 	public Bool64(long value) {
 		this.value = value;
 	}
 	
 	/**
-	 * 
-	 * @param mask
-	 * @param event
-	 * @return
+	 * Test whether bits of the mask argument are present in the long value
+	 * @param mask the mask to be tested against
+	 * @return boolean true if is matching, false otherwise
 	 */
 	public boolean has(long mask) {
 		return (value & mask) == mask;
 	}
 	
 	
+	/**
+	 * 
+	 * Test whether bits of the mask argument are present in the long value
+	 * 
+	 * @param value the value to be tested
+	 * @param mask the mask to be looked up
+	 * @return boolean true if is matching, false otherwise
+	 */
 	public static boolean has(long value, long mask) {
 		return (value & mask) == mask;
 	}
 	
+	
+	/**
+	 * Test different masks on the next byte
+	 * 
+	 * @param masks the masks to be tested
+	 * @return true if one of the mask is present
+	 */
 	public boolean hasOneOf(long... masks) {
 		int n = masks.length;
 		long mask;
@@ -135,8 +154,10 @@ public class Bool64 {
 
 	/**
 	 * 
-	 * @param masks
-	 * @return
+	 * Test whether all bits of all masks passed as arguments are present in the long value
+	 * 
+	 * @param masks masks to be tested
+	 * @return true if all masks have been found
 	 */
 	public boolean hasAllOf(long... masks) {
 		int n = masks.length;

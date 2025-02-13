@@ -28,9 +28,9 @@ import java.lang.annotation.Target;
 public @interface S8Setter {
 
 	/**
-	 * code for quick access to the method
+	 * Give the name of the field this setter method is attached to.
 	 * 
-	 * @return
+	 * @return the setter name
 	 */
 	public String name();
 	

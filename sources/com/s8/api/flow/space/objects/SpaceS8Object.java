@@ -41,7 +41,7 @@ import com.s8.api.exceptions.S8IOException;
  * 
  * 
  * @author Pierre Convert
- * Copyright (C) 2022, Pierre Convert. All rights reserved.
+ * Copyright (C) 2025, Pierre Convert. All rights reserved.
  * 
  */
 @S8ObjectType(name = "alpha/S8Object", sub= {})
@@ -64,7 +64,7 @@ public class SpaceS8Object {
 	
 	/**
 	 * Perform initial binding of object with vertex, vertex itself being bound to its shell
-	 * @param graph
+	 * 
 	 */
 	public SpaceS8Object() {
 	}
@@ -72,8 +72,8 @@ public class SpaceS8Object {
 	
 	
 	/**
-	 * 
-	 * @param event
+	 * Report an update for a field 
+	 * @param fieldName the name of the field fo which an update is to be reported
 	 * @throws S8IOException 
 	 */
 	public void reportFieldUpdate(String fieldName) throws S8IOException {
@@ -81,6 +81,11 @@ public class SpaceS8Object {
 	}
 	
 	
+	/**
+	 * Report an update for many fields
+	 * @param fieldNames the name of the fields fo which updates are to be reported
+	 * @throws S8IOException
+	 */
 	public void reportFieldUpdates(String... fieldNames) throws S8IOException {
 		if(S8_vertex!=null) { for(String fieldName : fieldNames) { S8_vertex.reportChange(fieldName); } }
 	}

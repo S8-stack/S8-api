@@ -40,7 +40,7 @@ import com.s8.api.annotations.S8ObjectType;
  * 
  * 
  * @author Pierre Convert
- * Copyright (C) 2022, Pierre Convert. All rights reserved.
+ * Copyright (C) 2025, Pierre Convert. All rights reserved.
  * 
  */
 @S8ObjectType(name = "alpha/S8Object", sub= {})
@@ -49,6 +49,9 @@ public class RepoS8Object {
 	
 	/* <field-properties> */
 	
+	/**
+	 * (System)
+	 */
 	public final static long REF = 0x0000000000000001L;
 	
 	
@@ -56,19 +59,16 @@ public class RepoS8Object {
 	
 	
 	/**
-	 * <h1>DO NOT USE THIS FIELD: SYSTEM ONLY</h1>
-	 * <p>
+	 * DO NOT USE THIS FIELD: S8 SYSTEM ONLY.
 	 * This index acts as an internal identifier and is automatically assigned at
 	 * commit time.
-	 * </p>
 	 */
 	public String S8_id = null;
 
 
 	/**
-	 * <h1>id field</h1>
-	 * <p>(Do not use this field)</p>
-	 * <p>For internal use only</p>
+	 * DO NOT USE THIS FIELD: S8 SYSTEM ONLY.
+	 * spin for fast graph exploration.
 	 */
 	public boolean S8_spin = false;
 	
@@ -82,8 +82,8 @@ public class RepoS8Object {
 	
 	
 	/**
+	 * Main constructor.
 	 * Perform initial binding of object with vertex, vertex itself being bound to its shell
-	 * @param graph
 	 */
 	public RepoS8Object() {
 	}

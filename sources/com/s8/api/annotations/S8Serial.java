@@ -8,6 +8,7 @@ import java.lang.annotation.Target;
 
 /**
  * 
+ * A Serial annotation for the S8 Stack.
  * 
  * 
  * @author Pierre Convert

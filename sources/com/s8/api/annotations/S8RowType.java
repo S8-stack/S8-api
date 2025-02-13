@@ -7,11 +7,12 @@ import java.lang.annotation.Target;
 
 /**
  *
- * <h1></h1>
- * <p>
+ * 
+ * The Type of row.
+ *
  * Storage is fixed forever. For evolving the model, create new record (for
  * instance let's say you have an object MyStorage {
- * </p>
+ *
  * 
  * <pre>
  * &#64;S8Record(name = "storage-#0001")
@@ -36,17 +37,23 @@ import java.lang.annotation.Target;
  * entirely build new objects that will replace the previous ones
  * </p>
  * <p>
- * Since storage format is not supposed to evolve, then we don't need to attach fix 
+ * Since storage format is not supposed to evolve, then we don't need to attach
+ * fix
  * 
  *
- * @author Pierre Convert
- * Copyright (C) 2022, Pierre Convert. All rights reserved.
+ * @author Pierre Convert Copyright (C) 2025, Pierre Convert. All rights
+ *         reserved.
  *
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface S8RowType {
 
-	public String name();
 	
+	/**
+	 * Gove the name of the type of this Row object
+	 * @return the typename
+	 */
+	public String name();
+
 }

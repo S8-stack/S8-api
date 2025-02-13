@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import com.s8.api.bytes.ByteInflow;
 
-
 /**
  * <p>
  * <b>Important explanation on why it's coded that way</b>.
@@ -37,36 +36,31 @@ import com.s8.api.bytes.ByteInflow;
  * instance tf the type of the fiekd is simply Impcoressible, we might want to
  * restrain encoding to simply the one give by this specific factory.
  * </p>
+ * 
+ * @param <S> The serializable type
  */
 public interface S8SerialPrototype<S extends S8Serializable> {
 
-
-
 	/**
-	 * 
-	 * @param type
-	 * @return
-	 * @throws IOException 
+	 * deserialize object from the {@link ByteInflow} byte inflow.
+	 * @param inflow the inflow
+	 * @return The deserialized object
+	 * @throws IOException
 	 */
 	public abstract S deserialize(ByteInflow inflow) throws IOException;
 
-
 	/**
-	 * 
-	 * @param base
-	 * @param object
-	 * @return
+	 * Compare two objects to determine if there are deltas.
+	 * @param left  left object for comparison
+	 * @param right right object for comparison
+	 * @return true if there is a delta/difference.
 	 */
 	public abstract boolean hasDelta(S left, S right);
-	
-	
-	
-	
+
 	/**
-	 * 
-	 * @return
+	 * Get serial type
+	 * @return the class of the objects represented by this prototype
 	 */
 	public abstract Class<?> getSerialType();
-
 
 }

@@ -21,31 +21,31 @@ public interface S8Serializable {
 
 
 	/**
-	 * 
-	 * @param outflow
-	 * @throws IOException
+	 * Serialize this object in the outflow passed as argument.
+	 * @param outflow the outflow
+	 * @throws IOException exception raised by the serialization and outflow writing process
 	 */
 	public void serialize(ByteOutflow outflow) throws IOException;
 	
 	
+
 	/**
-	 * 
-	 * @param <S>
-	 * @return
+	 * Get serial prototype
+	 * @return the serial prototype
 	 */
 	public abstract S8SerialPrototype<?> getSerialPrototype();
 	
 	
 	/**
 	 * return a proxy of memory footprint
-	 * @return
+	 * @return the value
 	 */
 	public long computeFootprint();
 	
 	
 	/**
-	 * 
-	 * @return
+	 * Generate a deep clone of this serializable
+	 * @return a deep clone
 	 */
 	public S8Serializable deepClone();
 

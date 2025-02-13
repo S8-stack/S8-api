@@ -2,50 +2,60 @@ package com.s8.api.flow.repository.objects;
 
 import java.util.function.BiConsumer;
 
+
+/**
+ * 
+ * 
+ * A flat object with the repository metadata.
+ * 
+ * @author Pierre Convert
+ * Copyright (C) 2025, Pierre Convert. All rights reserved.
+ *
+ */
 public interface S8RepositoryMetadata {
 
 	
 	/**
-	 * 
-	 * @return
+	 * Get the repository name
+	 * @return the repo name
 	 */
 	public String getName();
 	
 	
 	/**
-	 * 
-	 * @return
+	 * Get the repository address
+	 * @return the repo address
 	 */
 	public String getAddress();
 	
 	/**
-	 * 
-	 * @return
+	 * Get the creation date
+	 * @return date
 	 */
 	public long getCreationDate();
 	
 	/**
-	 * 
-	 * @return
+	 * Get the owner 
+	 * @return owner
 	 */
 	public String getOwner();
 	
 	/**
-	 * 
-	 * @return
+	 * Get the repository info
+	 * @return info
 	 */
 	public String getInfo();
 
 	/**
-	 * 
-	 * @return
+	 * Get the number of branches
+	 * @return branches
 	 */
 	public int getNbBranches();
 	
 	
 	/**
-	 * 
-	 * @param consumer
+	 * Crawl branches
+	 * @param consumer consumer
 	 */
 	public void crawlBranches(BiConsumer<String, S8BranchMetadata> consumer);
 	
