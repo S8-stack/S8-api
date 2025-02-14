@@ -181,6 +181,11 @@ public interface ByteOutflow {
 
 	
 
+	/**
+	 * Write value to the flow (Auto-feed underlying ByteBuffer as necessary).
+	 * @param value the value to write
+	 * @throws IOException exception while writing to the flow
+	 */
 	public void putInt8(byte value) throws IOException;
 
 	/**
@@ -198,6 +203,11 @@ public interface ByteOutflow {
 	public void putInt32(int value) throws IOException;
 	
 	
+	/**
+	 * Push an Int32[] array into the flow. Auto-feed underlying ByteBuffer as necessary.
+	 * @param value the value written
+	 * @throws IOException the exception rasied in the writing process
+	 */
 	public default void putInt32Array(int[] value) throws IOException {
 		if(value != null) {
 			int n = value.length;

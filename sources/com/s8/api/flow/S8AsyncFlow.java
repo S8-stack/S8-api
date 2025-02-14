@@ -230,7 +230,7 @@ public interface S8AsyncFlow {
 
 
 	/**
-	 * 
+	 * Run the flow
 	 */
 	public void play();
 	
@@ -240,8 +240,8 @@ public interface S8AsyncFlow {
 	/**
 	 * Deliver a generated resource
 	 * 
-	 * @param load
-	 * @param generator
+	 * @param load the load indicator
+	 * @param generator the resource generator
 	 */
 	public void deliver(int load, S8WebResourceGenerator generator);
 

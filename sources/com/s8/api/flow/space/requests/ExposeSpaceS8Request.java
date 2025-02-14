@@ -32,6 +32,13 @@ public abstract class ExposeSpaceS8Request {
 	
 	
 	
+	/**
+	 * Main Constructor
+	 * 
+	 * @param spaceId the space id
+	 * @param exposure the exposure selected for the space
+	 * @param saveImmediatelyAfter true if hardware persisentcy is required immeditaley after exposing
+	 */
 	public ExposeSpaceS8Request(String spaceId, SpaceS8Object[] exposure, boolean saveImmediatelyAfter) {
 		super();
 		this.spaceId = spaceId;
@@ -40,8 +47,15 @@ public abstract class ExposeSpaceS8Request {
 	}
 	
 	
+	/**
+	 * Request responses
+	 */
 	public enum Status {
+		
+		/** Everything went fine */
 		OK,
+		
+		/** Space cannot be found */
 		NOT_FOUND;
 	}
 	

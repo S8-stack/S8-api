@@ -45,7 +45,7 @@ public interface S8SerialPrototype<S extends S8Serializable> {
 	 * deserialize object from the {@link ByteInflow} byte inflow.
 	 * @param inflow the inflow
 	 * @return The deserialized object
-	 * @throws IOException
+	 * @throws IOException the raised exception when deserializing
 	 */
 	public abstract S deserialize(ByteInflow inflow) throws IOException;
 

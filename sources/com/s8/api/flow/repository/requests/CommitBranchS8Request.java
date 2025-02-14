@@ -12,18 +12,44 @@ import com.s8.api.flow.repository.objects.RepoS8Object;
  */
 public abstract class CommitBranchS8Request {
 
+	
+	/**
+	 * The request target repository address
+	 */
 	public final String repositoryAddress;
 	
+	/**
+	 * The request target branch id
+	 */
 	public final String branchId;
 	
+	
+	/**
+	 * The request committed objects
+	 */
 	public final RepoS8Object[] objects;
 	
+	/**
+	 * The authod of the commit
+	 */
 	public final String author;
 	
+	/**
+	 * The comment along the commit
+	 */
 	public final String comment;
 	
 	
 	
+	/**
+	 * Main constructor
+	 * 
+	 * @param repositoryAddress the repository address
+	 * @param branchId the branch id
+	 * @param objects the objects
+	 * @param author the author
+	 * @param comment the comment
+	 */
 	public CommitBranchS8Request(String repositoryAddress, String branchId, RepoS8Object[] objects, String author,
 			String comment) {
 		super();
@@ -36,10 +62,21 @@ public abstract class CommitBranchS8Request {
 	
 	
 	
+	/**
+	 * Reponses status
+	 */
 	public enum Status {
+		
+		/** ok */
 		OK,
+		
+		/** Repository cannot be found for the give address */
 		REPOSITORY_NOT_FOUND,
+		
+		/** Branch cannot be found for the given id */
 		NO_SUCH_BRANCH,
+		
+		/** Request is invalid */
 		INVALID_REQUEST;
 	}
 	

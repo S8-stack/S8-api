@@ -44,8 +44,14 @@ public abstract class CreateRepositoryS8Request {
 	public final String initialCommitComment;
 	
 	
+	/**
+	 * true if resource has to be saved
+	 */
 	public boolean isResourceSaved = false;
 	
+	/**
+	 * true if override is enabled
+	 */
 	public boolean isOverrideEnabled = false;
 	
 	

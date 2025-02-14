@@ -72,6 +72,7 @@ public class S8IOException extends IOException {
 	 * Constructor for type + cause catching
 	 * @param message the wrapped message
 	 * @param type the involved type
+	 * @param cause the root cause exception
 	 */
 	public S8IOException(String message, Class<?> type, Exception cause) {
 		super(message+", due to "+cause.getMessage()+", for @type: "+type);

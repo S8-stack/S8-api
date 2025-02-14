@@ -517,6 +517,13 @@ public interface S8WebVertexInbound {
 	 */
 	public void setStringUTF8ArrayMethod(String name, StringUTF8ArrayNeFunction function);
 
+	
+	/**
+	 * Define behaviour for the method of the object attached to this vertex.
+	 * 
+	 * @param name front method name
+	 * @param lambda the behaviour to be run upon remote front method trigger
+	 */
 	public default void setStringUTF8ArrayMethodLambda(String name, StringUTF8ArrayLambda lambda) {
 		setStringUTF8ArrayMethod(name, (flow, value) -> {
 			flow.runBlock(0, () -> lambda.operate(value));

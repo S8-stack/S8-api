@@ -28,8 +28,8 @@ public abstract class CreateTableS8Request {
 	
 	/**
 	 * The main constructor
-	 * @param tableId
-	 * @param isSaveImmediatelyRequired
+	 * @param tableId the table id 
+	 * @param isSaveImmediatelyRequired true if hardware persistenyc is required immediately after
 	 */
 	public CreateTableS8Request(String tableId, boolean isSaveImmediatelyRequired) {
 		super();

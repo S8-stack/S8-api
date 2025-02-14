@@ -17,6 +17,14 @@ public class S8ExplicitSerialCodes {
 	
 
 	/* </image> */
+	
+	
+	/**
+	 * Default constructor
+	 */
+	public S8ExplicitSerialCodes() {
+		super();
+	}
 
 
 }

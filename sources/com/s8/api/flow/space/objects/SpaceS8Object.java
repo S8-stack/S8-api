@@ -50,6 +50,9 @@ public class SpaceS8Object {
 	
 	/* <field-properties> */
 	
+	/**
+	 * Utility
+	 */
 	public final static long REF = 0x0000000000000001L;
 	
 	
@@ -74,7 +77,7 @@ public class SpaceS8Object {
 	/**
 	 * Report an update for a field 
 	 * @param fieldName the name of the field fo which an update is to be reported
-	 * @throws S8IOException 
+	 * @throws S8IOException the exception raised while reporting
 	 */
 	public void reportFieldUpdate(String fieldName) throws S8IOException {
 		if(S8_vertex!=null) { S8_vertex.reportChange(fieldName); }
@@ -84,7 +87,7 @@ public class SpaceS8Object {
 	/**
 	 * Report an update for many fields
 	 * @param fieldNames the name of the fields fo which updates are to be reported
-	 * @throws S8IOException
+	 * @throws S8IOException the exception raised while reporting
 	 */
 	public void reportFieldUpdates(String... fieldNames) throws S8IOException {
 		if(S8_vertex!=null) { for(String fieldName : fieldNames) { S8_vertex.reportChange(fieldName); } }

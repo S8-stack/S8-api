@@ -2,6 +2,16 @@ package com.s8.api.web;
 
 import com.s8.api.flow.delivery.S8WebResourceGenerator;
 
+
+/**
+ * Base module for providers inside the vertex.
+ * 
+ * @see S8WebVertex
+ * 
+ * @author Pierre Convert
+ * Copyright (C) 2025, Pierre Convert. All rights reserved.
+ * 
+ */
 public interface WebS8VertexProviders {
 
 

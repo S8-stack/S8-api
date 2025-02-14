@@ -29,8 +29,8 @@ public abstract class CreateSpaceS8Request {
 	/**
 	 * Main constructor
 	 * 
-	 * @param spaceId
-	 * @param exposure
+	 * @param spaceId the space id
+	 * @param exposure the initial exposure
 	 */
 	public CreateSpaceS8Request(String spaceId, SpaceS8Object[] exposure) {
 		super();
@@ -56,14 +56,17 @@ public abstract class CreateSpaceS8Request {
 
 	
 	/**
+	 * Callback method run upon successful request execution
 	 * 
+	 * @param status the response status
+	 * @param version the response version
 	 */
 	public abstract void onProcessed(Status status, long version);
 
 
 	/**
-	 * 
-	 * @param exception
+	 * Callback method run upon failed request execution
+	 * @param exception the exception raised
 	 */
 	public abstract void onFailed(Exception exception);
 

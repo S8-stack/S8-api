@@ -23,10 +23,21 @@ public class S8BuildException extends Exception {
 	 */
 	private static final long serialVersionUID = -3056476425696740047L;
 
+	/**
+	 * The involved type
+	 */
 	private Class<?> type;
 	
+	
+	/**
+	 * the involved field
+	 */
 	private Field field;
 	
+	
+	/**
+	 * the involved method
+	 */
 	private Method method;
 	
 	

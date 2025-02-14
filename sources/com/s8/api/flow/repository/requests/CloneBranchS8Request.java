@@ -48,8 +48,8 @@ public abstract class CloneBranchS8Request {
 	
 	/**
 	 * Secondary constructor with default value
-	 * @param repositoryAddress
-	 * @param branchId
+	 * @param repositoryAddress the target repository id
+	 * @param branchId the target branch id
 	 */
 	public CloneBranchS8Request(String repositoryAddress, String branchId) {
 		super();
@@ -94,7 +94,7 @@ public abstract class CloneBranchS8Request {
 	/**
 	 * Callback run upon failed request execution
 	 * 
-	 * @param exception
+	 * @param exception the raised exception
 	 */
 	public abstract void onError(Exception exception);
 }
