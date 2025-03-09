@@ -8,6 +8,7 @@
 module com.s8.api {
 	
 	
+	exports com.s8.api;
 	
 	exports com.s8.api.bytes;
 	
