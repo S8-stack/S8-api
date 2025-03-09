@@ -65,7 +65,7 @@ public interface S8MailBuilder {
 	 * @param CSS_classname the CSS classname
 	 * @param CSS_style the CSS style
 	 */
-	public void HTML_setWrapperStyle(String CSS_classname, String CSS_style);
+	public void html_setWrapperStyle(String CSS_classname, String CSS_style);
 	
 	
 	/**
@@ -76,6 +76,6 @@ public interface S8MailBuilder {
 	 * @param CSS_style the style
 	 * @param innerHTMLText the inner html content
 	 */
-	public void HTML_appendBaseElement(String tag, String CSS_classname, String CSS_style, String innerHTMLText);
+	public void html_appendBaseElement(String tag, String CSS_classname, String CSS_style, String innerHTMLText);
 	
 }
